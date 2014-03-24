@@ -21,7 +21,7 @@ var splash = (function () {
 	fade: function(time, nextimg) {
 	    if (nextimg === "") {
 		clearInterval(fadetimer);
-		$("splash").remove();
+
 	    }
 
 	    canvas.width = img.width;
@@ -55,6 +55,7 @@ var splash = (function () {
 		setTimeout(function() { splash.fade(2700, ""); }, 500);
 	    }
 	    else {
+		$("#splash").remove();
 		setTimeout(main.init, 0);
 	    }
 	}
