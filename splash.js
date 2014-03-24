@@ -54,7 +54,9 @@ var splash = (function () {
 	    if (path !== "") {
 		setTimeout(function() { splash.fade(2700, ""); }, 500);
 	    }
+	    else {
+		setTimeout(main.init, 0);
+	    }
 	}
     }
 })();
-
