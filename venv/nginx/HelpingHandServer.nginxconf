@@ -1,0 +1,37 @@
+
+upstream HelpingHandServer_server {
+  server unix:/webapps/HelpingHandServer/run/gunicorn.sock fail_timeout=0;
+}
+
+server {
+  listen 80;
+  server_name HelpingHandServer;
+  
+  max_client_body_size 4G;
+
+  access_log /webapps/HelpingHandServer/logs/nginx-access.log;
+  error_log /webapps/HelpingHandServer/logs/nginx-error.log;
+
+  location /static/ {
+    alias /webapps/HelpingHandServer/static/;
+  } 
+
+  location /media/ {
+    alias /webapps/HelpingHandServer/media/;
+  } 
+
+  location / {
+    proxy_set_header X-Forwarded-For $proxy_add_forwarded_for;
+    proxy_set_header Host $http_host;
+    proxy_redirect off;
+    if (!-f $request_filename) {
+      proxy_pass http://HelpingHandServer_server;
+      break;
+    }
+  }
+
+  error_page 500 502 503 504 /500.html;
+  location = /500.html {
+    root /webapps/HelpingHandServer/static/;
+  }
+}
