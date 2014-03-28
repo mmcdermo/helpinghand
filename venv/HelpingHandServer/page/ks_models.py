@@ -12,8 +12,8 @@ class Item(models.Model):
         return '%s' % (self.title)
 
 class Page(models.Model):
-    content = models.TextField()
     title = models.CharField(max_length=32)
+    content = models.TextField()
 
     def __unicode__(self):
         return '%s' % (self.title)

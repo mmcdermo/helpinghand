@@ -94,3 +94,12 @@ def deletePage(request):
         return HttpResponse('Deleted %s objects' % count)
     return HttpResponse('Please send data as POST')
 
+def getDisplayableElement(element):
+    if request.method == 'POST':
+        data = request.POST
+        if data['type'] == "menu":
+            qs = Item.objects.filter(owner=data['name'])
+        elif data['type'] == "page":
+            qs = Page.objects.get(title=data['name'])
+        return HttpResponse(serializers.serialize([qs]))
+    return HttpResponse('Please send data as POST')

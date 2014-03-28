@@ -13,5 +13,6 @@ urlpatterns = patterns('',
     url('^api/page/Item/search/$','page.middletier.searchItem',name='search_Item'),
     url('^api/page/Page/create/$','page.middletier.createPage',name='create_Page'),
     url('^api/page/Page/search/$','page.middletier.searchPage',name='search_Page'),
+    url('^getElement/(.{1,32})/$', 'page.middletier.getDisplayableElement',name='get element'),
     url('^/$','main.views.home',name='home'),
 )
