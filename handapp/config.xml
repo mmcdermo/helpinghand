@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="edu.stanford.surgery.hand" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Stanford Hand Surgery</name>
+    <description>
+        Stanford Hand Surgery Information App
+    </description>
+    <author href="http://ucsc.edu">
+      John Carlyle, Jeremy Crowe, and Morgan McDermott
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <preference name="DisallowOverscroll" value="true" />
+
+</widget>
