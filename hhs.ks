@@ -1,4 +1,3 @@
-//generate a webular site man
 website : {
     name: "HelpingHandServer",
     prettyName: "Helping Hand",
