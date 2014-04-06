@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+<!-- Body -->
+{% block body %}
+
+
+<!-- Header -->
+<div id="header">
+{% block header %}<a href="/"><h1>Helping Hand</h1></a>
+
+{% endblock %}
+</div>
+<!-- End Header -->
+
+<!-- Menu -->
+<div id="menu">
+{% block menu %}
+<ul id='nav'>
+</ul>
+{% endblock %}
+</div>
+<!-- End Menu -->
+
+<!-- Content -->
+<div id="content">
+{% block content %}
+{% endblock %}
+</div>
+<!-- End Content -->
+
+<!-- Footer -->
+<div id="footer">
+{% block footer %}<span style='float:right;'>&copy; 2014 John Carlyle, Jeremy Crowe, and Morgan McDermott</span><span style='float:left;'>Powered by Kaleidoscope</span>
+{% endblock %}
+</div>
+<!-- End Footer -->
+
+
+{% endblock %}
+<!-- End Body -->

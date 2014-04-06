@@ -1,0 +1,7 @@
+<div>
+<ul>
+{% for o in objs %}
+    <li><a href='/{{ o.targetType }}/{{ o.target }}'>{{ o.title }}</a></li>
+{% endfor %}
+</ul>
+</div>
