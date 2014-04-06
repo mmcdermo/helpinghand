@@ -3,6 +3,8 @@ helpinghand
 
 Run test server:
 
-```python -m SimpleHTTPServer```
+```cd server ; make test```
 
-Need this because of image manipulation with javascript. Using file:/// causes a cross site image thing even though it should be fine :\
+Launches a test server at ```127.0.0.1:8000```
+
+To edit point browser to ```127.0.0.1:8000/admin``` to test the menus and pages ```127.0.0.1:8000/menu/menuname``` and ```127.0.0.1:8000/page/pagename```.
