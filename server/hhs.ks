@@ -1,7 +1,7 @@
 website : {
     name: "HelpingHandServer",
     prettyName: "Helping Hand",
-    author: "John Carlyle, Jeremy Crowe, Morgan McDermott",
+    author: "John Carlyle, Jeremy Crowe, and Morgan McDermott",
     admins: { a : { name : "John Carlyle", email: "john.w.carlyle@gmail.com" },
 	      b : { name: "Morgan McDermott", email: "morganmcdermott@gmail.com" },
 	      c : { name: "Jeremy Crowe", email: "crowe.jb@gmail.com" }}
@@ -15,13 +15,13 @@ apps: {
 	    Item: {
 		fields: {
 		    title: CharField { length: 32 },
-		    owner: CharField { length: 32 },
-		    menu: CharField { length: 32, optional: "True" },
-		    page: ForeignKey { link: "'Page'", optional: "True" }
+		    menu: CharField { length: 32 },
+		    targetType: CharField { length: 32 },
+		    target: CharField { length: 32, optional: "True" }
 		},
 		admin: "%title",
-		listing: "%title%",
-		display: "<p>%title%</p>"
+		listing: "<a href='/%targetType%/%target%'>%title%</a>",
+		display: "<a href='/%targetType%/%target%'>%title%</a>"
 	    },
 
 	    Page: {
@@ -30,7 +30,7 @@ apps: {
 		    content: TextField
 		},
 		admin: "%title",
-		listing: "",
+		listing: "", //this should never come up
 		display: "<h1>%title%</h1><div>%content%</div>"
 	    }
 	}
@@ -43,9 +43,20 @@ database: {
 },
 
 menu: {
-    home: { title: "Home", link: "/", placement: 0 }
 },
 
 pages: {
-    home: { title: "dude", url: "", template: "" }
+    home: { title: "Homepage", url: "", template: "" },
+    menu: { 
+	title: "Menu", 
+	url: "menu/(.*)/", 
+	template: "%menuItems%", 
+	menuItems: expr { expr: S[menu="%1"](page->Item) }
+    },
+    page: { 
+	title: "Page", 
+	url: "page/(.*)/", 
+	template: "%pageData%", 
+	pageData: expr { expr: S[title="%1"](page->Page) }
+    }
 }
