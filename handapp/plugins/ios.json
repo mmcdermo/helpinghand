@@ -11,12 +11,16 @@
         },
         "config.xml": {
             "/*": {
-                "<feature name=\"SplashScreen\"><param name=\"ios-package\" value=\"CDVSplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>": 1
+                "<feature name=\"SplashScreen\"><param name=\"ios-package\" value=\"CDVSplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>": 1,
+                "<feature name=\"Console\"><param name=\"ios-package\" value=\"CDVLogger\" /></feature>": 1
             }
         }
     },
     "installed_plugins": {
         "org.apache.cordova.splashscreen": {
+            "PACKAGE_NAME": "edu.stanford.helpinghands"
+        },
+        "org.apache.cordova.console": {
             "PACKAGE_NAME": "edu.stanford.helpinghands"
         }
     },

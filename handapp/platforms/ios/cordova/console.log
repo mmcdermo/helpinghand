@@ -1,0 +1,51 @@
+2014-04-06 20:27:57.563 Helping Hands[17763:70b] Multi-tasking -> Device: YES, App: YES
+2014-04-06 20:27:57.763 Helping Hands[17763:70b] CDVPlugin class CDVSplashScreen (pluginName: splashscreen) does not exist.
+2014-04-06 20:27:57.764 Helping Hands[17763:70b] [CDVTimer][splashscreen] 0.651956ms
+2014-04-06 20:27:57.764 Helping Hands[17763:70b] [CDVTimer][TotalPluginStartup] 1.221001ms
+2014-04-06 20:27:57.975 Helping Hands[17763:70b] Resetting plugins due to page load.
+2014-04-06 20:27:58.035 Helping Hands[17763:3f03] ERROR whitelist rejection: url='http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css'
+2014-04-06 20:27:58.037 Helping Hands[17763:3f03] ERROR whitelist rejection: url='http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css'
+2014-04-06 20:27:58.038 Helping Hands[17763:3f03] ERROR whitelist rejection: url='http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css'
+2014-04-06 20:27:58.195 Helping Hands[17763:70b] Finished load of: file:///Users/jc/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/3087FA9D-DD0A-4354-BE99-1A5E926A6B6F/Helping%20Hands.app/www/index.html
+2014-04-06 20:30:00.303 Helping Hands[18021:70b] Multi-tasking -> Device: YES, App: YES
+2014-04-06 20:30:00.327 Helping Hands[18021:70b] CDVPlugin class CDVSplashScreen (pluginName: splashscreen) does not exist.
+2014-04-06 20:30:00.328 Helping Hands[18021:70b] [CDVTimer][splashscreen] 0.559986ms
+2014-04-06 20:30:00.328 Helping Hands[18021:70b] [CDVTimer][TotalPluginStartup] 1.013041ms
+2014-04-06 20:30:00.366 Helping Hands[18021:70b] Resetting plugins due to page load.
+2014-04-06 20:30:00.433 Helping Hands[18021:70b] Finished load of: file:///Users/jc/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/3087FA9D-DD0A-4354-BE99-1A5E926A6B6F/Helping%20Hands.app/www/index.html
+2014-04-06 20:31:00.575 Helping Hands[18398:70b] Multi-tasking -> Device: YES, App: YES
+2014-04-06 20:31:00.611 Helping Hands[18398:70b] CDVPlugin class CDVSplashScreen (pluginName: splashscreen) does not exist.
+2014-04-06 20:31:00.612 Helping Hands[18398:70b] [CDVTimer][splashscreen] 0.666022ms
+2014-04-06 20:31:00.613 Helping Hands[18398:70b] [CDVTimer][TotalPluginStartup] 1.262009ms
+2014-04-06 20:31:00.740 Helping Hands[18398:70b] Resetting plugins due to page load.
+2014-04-06 20:31:00.842 Helping Hands[18398:70b] Finished load of: file:///Users/jc/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/3087FA9D-DD0A-4354-BE99-1A5E926A6B6F/Helping%20Hands.app/www/index.html
+2014-04-06 20:32:53.936 Helping Hands[18739:70b] Multi-tasking -> Device: YES, App: YES
+2014-04-06 20:32:53.971 Helping Hands[18739:70b] CDVPlugin class CDVSplashScreen (pluginName: splashscreen) does not exist.
+2014-04-06 20:32:53.972 Helping Hands[18739:70b] [CDVTimer][splashscreen] 0.639021ms
+2014-04-06 20:32:53.972 Helping Hands[18739:70b] [CDVTimer][TotalPluginStartup] 1.210988ms
+2014-04-06 20:32:54.107 Helping Hands[18739:70b] Resetting plugins due to page load.
+2014-04-06 20:32:54.224 Helping Hands[18739:70b] Finished load of: file:///Users/jc/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/3087FA9D-DD0A-4354-BE99-1A5E926A6B6F/Helping%20Hands.app/www/index.html
+2014-04-06 20:37:55.041 Helping Hands[18999:70b] Multi-tasking -> Device: YES, App: YES
+2014-04-06 20:37:55.066 Helping Hands[18999:70b] CDVPlugin class CDVSplashScreen (pluginName: splashscreen) does not exist.
+2014-04-06 20:37:55.067 Helping Hands[18999:70b] [CDVTimer][splashscreen] 0.594974ms
+2014-04-06 20:37:55.067 Helping Hands[18999:70b] [CDVTimer][TotalPluginStartup] 1.066983ms
+2014-04-06 20:37:55.106 Helping Hands[18999:70b] Resetting plugins due to page load.
+2014-04-06 20:37:55.182 Helping Hands[18999:70b] Finished load of: file:///Users/jc/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/3087FA9D-DD0A-4354-BE99-1A5E926A6B6F/Helping%20Hands.app/www/index.html
+2014-04-06 20:38:42.037 Helping Hands[19266:70b] Multi-tasking -> Device: YES, App: YES
+2014-04-06 20:38:42.077 Helping Hands[19266:70b] CDVPlugin class CDVSplashScreen (pluginName: splashscreen) does not exist.
+2014-04-06 20:38:42.078 Helping Hands[19266:70b] [CDVTimer][splashscreen] 0.702024ms
+2014-04-06 20:38:42.078 Helping Hands[19266:70b] [CDVTimer][TotalPluginStartup] 1.287997ms
+2014-04-06 20:38:42.239 Helping Hands[19266:70b] Resetting plugins due to page load.
+2014-04-06 20:38:42.398 Helping Hands[19266:70b] Finished load of: file:///Users/jc/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/3087FA9D-DD0A-4354-BE99-1A5E926A6B6F/Helping%20Hands.app/www/index.html
+2014-04-06 20:45:10.174 Helping Hands[19621:70b] Multi-tasking -> Device: YES, App: YES
+2014-04-06 20:45:10.198 Helping Hands[19621:70b] CDVPlugin class CDVSplashScreen (pluginName: splashscreen) does not exist.
+2014-04-06 20:45:10.198 Helping Hands[19621:70b] [CDVTimer][splashscreen] 0.549972ms
+2014-04-06 20:45:10.199 Helping Hands[19621:70b] [CDVTimer][TotalPluginStartup] 1.001954ms
+2014-04-06 20:45:10.290 Helping Hands[19621:70b] Resetting plugins due to page load.
+2014-04-06 20:45:10.356 Helping Hands[19621:70b] Finished load of: file:///Users/jc/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/3087FA9D-DD0A-4354-BE99-1A5E926A6B6F/Helping%20Hands.app/www/index.html
+2014-04-06 20:45:40.913 Helping Hands[19890:70b] Multi-tasking -> Device: YES, App: YES
+2014-04-06 20:45:40.950 Helping Hands[19890:70b] CDVPlugin class CDVSplashScreen (pluginName: splashscreen) does not exist.
+2014-04-06 20:45:40.951 Helping Hands[19890:70b] [CDVTimer][splashscreen] 1.016974ms
+2014-04-06 20:45:40.951 Helping Hands[19890:70b] [CDVTimer][TotalPluginStartup] 1.920998ms
+2014-04-06 20:45:41.089 Helping Hands[19890:70b] Resetting plugins due to page load.
+2014-04-06 20:45:41.190 Helping Hands[19890:70b] Finished load of: file:///Users/jc/Library/Application%20Support/iPhone%20Simulator/7.1/Applications/3087FA9D-DD0A-4354-BE99-1A5E926A6B6F/Helping%20Hands.app/www/index.html
