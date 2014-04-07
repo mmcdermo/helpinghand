@@ -9,6 +9,7 @@ Launches a test server at ```127.0.0.1:8000```
 
 To edit point browser to ```127.0.0.1:8000/admin``` to test the menus and pages ```127.0.0.1:8000/menu/menuname``` and ```127.0.0.1:8000/page/pagename```.
 
+Launch either the iOS or android, at this point they should be able to load the main menu. iOS succeeds at the moment, can't figure out how to get the debugging onfo from the android emulator, but it is failing for some reason.
 
 
 Work todo
