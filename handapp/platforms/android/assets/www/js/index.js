@@ -16,9 +16,13 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+var server = "http://localhost:8000/";
+var stack = [];
+
 var app = {
     // Application Constructor
-    initialize: function() {
+    initialize: function() {	
         this.bindEvents();
     },
     // Bind Event Listeners
@@ -33,20 +37,49 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-	//call server for main menu
-	$.ajax({
-	    url: "http://localhost:8000/menu/main/",
-	}).done(function (result) {
-	    console.log("loading");
-	    $("#deviceready").html($(result).find('div').html());
-	    app.receivedEvent('deviceready');
-	}).fail(function (error) {
-	    console.log(error);
-            app.receivedEvent('deviceready');
-	});
-	
-
+	//call server for main menu and ready the device
+	stack.push("menu/main");
+	app.callForContent("menu/main");
+	app.receivedEvent('deviceready');
     },
+
+    callForContent: function(query) {
+	//check cache
+	var data = window.localStorage.getItem(query);
+	if (data !== null) { //cache hit
+	    $("#deviceready").html(data);
+	    $("a").on("touchend", app.clickItem);		
+	}
+	else {//cache miss: make a query to server
+	    $.ajax({
+		url: server+query,
+	    }).done(function (result) {
+		var content = $(result).find('div').html();//parse out the div with the content
+		$("#deviceready").html(content);
+		$("a").on("touchend", app.clickItem);
+		window.localStorage.setItem(query,content);
+	    });
+	}
+	
+	//re-register touch events
+    },
+
+    clickItem: function(event) {
+	//an a tag was clicked, which amounts to a button.
+	var id = event.target.id;
+	if (id === "back") {
+	    if (stack.length > 1) {
+		stack.pop();
+		app.callForContent(stack[stack.length-1]);
+	    }
+	}
+	else {
+	    id = id.replace(/\./,"/");
+	    stack.push(id);
+	    app.callForContent(id);
+	}
+    },
+
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
@@ -59,3 +92,4 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+
