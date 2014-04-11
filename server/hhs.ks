@@ -20,8 +20,8 @@ apps: {
 		    target: CharField { length: 32, optional: "True" }
 		},
 		admin: "%title",
-		listing: "<a href='/%targetType%/%target%'>%title%</a>",
-		display: "<a href='/%targetType%/%target%'>%title%</a>"
+		listing: "<a id='%targetType%.%target%' href='#'>%title%</a>",
+		display: "<a id='%targetType%.%target%' href='#'>%title%</a>"
 	    },
 
 	    Page: {

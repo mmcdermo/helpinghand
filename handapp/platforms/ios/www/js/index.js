@@ -16,9 +16,13 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+var server = "http://localhost:8000/";
+
 var app = {
     // Application Constructor
-    initialize: function() {
+    initialize: function() {	
+//	alert("init");
         this.bindEvents();
     },
     // Bind Event Listeners
@@ -33,20 +37,26 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
-	//call server for main menu
-	$.ajax({
-	    url: "http://localhost:8000/menu/main/",
-	}).done(function (result) {
-	    console.log("loading");
-	    $("#deviceready").html($(result).find('div').html());
-	    app.receivedEvent('deviceready');
-	}).fail(function (error) {
-	    console.log(error);
-            app.receivedEvent('deviceready');
-	});
-	
-
+	//call server for main menu and ready the device
+	app.callForContent("menu/main");
+	app.receivedEvent('deviceready');
     },
+
+    callForContent: function(query) {
+	//make a query to server
+	$.ajax({
+	    url: server+query,
+	}).done(function (result) {
+	    $("#deviceready").html($(result).find('div').html());//parse out the div with the content
+	    $("a").on("touchend", app.clickItem);
+	});
+    },
+
+    clickItem: function(event) {
+	//an a tag was clicked, which amounts to a button.
+	app.callForContent(event.target.id.replace(/\./,"/"));
+    },
+
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
@@ -59,3 +69,4 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+
