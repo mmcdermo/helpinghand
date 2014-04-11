@@ -18,11 +18,11 @@
  */
 
 var server = "http://localhost:8000/";
+var stack = [];
 
 var app = {
     // Application Constructor
     initialize: function() {	
-//	alert("init");
         this.bindEvents();
     },
     // Bind Event Listeners
@@ -38,23 +38,47 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
 	//call server for main menu and ready the device
+	stack.push("menu/main");
 	app.callForContent("menu/main");
 	app.receivedEvent('deviceready');
     },
 
     callForContent: function(query) {
-	//make a query to server
-	$.ajax({
-	    url: server+query,
-	}).done(function (result) {
-	    $("#deviceready").html($(result).find('div').html());//parse out the div with the content
-	    $("a").on("touchend", app.clickItem);
-	});
+	//check cache
+	var data = window.localStorage.getItem(query);
+	if (data !== null) { //cache hit
+	    alert("hit");
+	    $("#deviceready").html(data);
+	    $("a").on("touchend", app.clickItem);		
+	}
+	else {//cache miss: make a query to server
+	    $.ajax({
+		url: server+query,
+	    }).done(function (result) {
+		var content = $(result).find('div').html();//parse out the div with the content
+		$("#deviceready").html(content);
+		$("a").on("touchend", app.clickItem);
+		window.localStorage.setItem(query,content);
+	    });
+	}
+	
+	//re-register touch events
     },
 
     clickItem: function(event) {
 	//an a tag was clicked, which amounts to a button.
-	app.callForContent(event.target.id.replace(/\./,"/"));
+	var id = event.target.id;
+	if (id === "back") {
+	    if (stack.length > 1) {
+		stack.pop();
+		app.callForContent(stack[stack.length-1]);
+	    }
+	}
+	else {
+	    id = id.replace(/\./,"/");
+	    stack.push(id);
+	    app.callForContent(id);
+	}
     },
 
     // Update DOM on a Received Event
