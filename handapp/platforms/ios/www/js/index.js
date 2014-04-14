@@ -46,12 +46,11 @@ var app = {
     callForContent: function(query) {
 	//check cache
 	var data = window.localStorage.getItem(query);
-	if (data !== null) { //cache hit
-	    alert("hit");
+/*	if (data !== null) { //cache hit
 	    $("#deviceready").html(data);
 	    $("a").on("touchend", app.clickItem);		
 	}
-	else {//cache miss: make a query to server
+	else {//cache miss: make a query to server*/
 	    $.ajax({
 		url: server+query,
 	    }).done(function (result) {
@@ -60,7 +59,7 @@ var app = {
 		$("a").on("touchend", app.clickItem);
 		window.localStorage.setItem(query,content);
 	    });
-	}
+	//}
 	
 	//re-register touch events
     },

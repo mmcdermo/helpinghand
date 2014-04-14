@@ -41,7 +41,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "main.context_processors.signupForm",
     "django.core.context_processors.request"
 )
-SECRET_KEY = 'g7k0bao*dl3ea)*($)+t%gc*0i&u*-0k4q+p+jz!(08s69&*au'
+SECRET_KEY = '18p-q%byt_6oi5njkle(os(icwy3_bf-7*p--=1u1w^e!#$-d#'
 
 #Administrators
 ADMINS = (

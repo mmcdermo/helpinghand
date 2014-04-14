@@ -1,5 +1,5 @@
 <div>
-<ul>
+<ul data-role='listview'>
 {% for o in objs %}
     <li><a id='{{ o.targetType }}.{{ o.target }}' href='#'>{{ o.title }}</a></li>
 {% endfor %}
