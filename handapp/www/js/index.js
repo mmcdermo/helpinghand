@@ -22,7 +22,7 @@ var stack = [];
 
 var app = {
     // Application Constructor
-    initialize: function() {	
+    initialize: function() {
         this.bindEvents();
     },
     // Bind Event Listeners
@@ -58,6 +58,8 @@ var app = {
 		$("#deviceready").html(content);
 		$("a").on("touchend", app.clickItem);
 		window.localStorage.setItem(query,content);
+	    }).fail(function (error) {
+		$("#deviceready").html("<h1>Error</h1><p>Please check your network connectivity and try again.</p>");
 	    });
 	//}
 	

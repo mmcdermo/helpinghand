@@ -1,2 +1,8 @@
-<div><ul><li><a id='{{ obj.targetType }}.{{ obj.target }}' href='#' class='ui-btn'>{{ obj.title }}</a></li></ul>
+<div>
+<ul data-role='listview' class='ui-listview ui-listview-inset ui-corner-all ui-shadow'>
+<li data-role="list-divider" data-theme="a" data-swatch="a" data-form="ui-bar-a" role="heading" class="ui-li-divider ui-bar-a ui-first-child">{{ obj.menu }}</li>
+<li class='ui-last-child'><a id='{{ obj.targetType }}.{{ obj.target }}' class="ui-btn-a ui-btn ui-btn-icon-right ui-icon-carat-r" data-form="ui-btn-up-a" data-swatch="a" data-theme="a" href="#">{{ obj.title }}</a></li>
+</ul>
 </div>
+
+

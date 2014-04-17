@@ -2,7 +2,11 @@
 
 from django.contrib import admin
 from models import Item
-admin.site.register(Item)
+
+class ItemAdmin(admin.ModelAdmin):
+    list_display = ('title','menu','targetType','target')
+
+admin.site.register(Item,ItemAdmin)
 
 
 from django.contrib import admin
