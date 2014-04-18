@@ -1472,8 +1472,8 @@ div.ui-mobile-viewport {
 	display: block;
 	margin: 0 30%;
 	padding: .7em 0;
-	text-overflow: ellipsis;
-	overflow: hidden;
+
+	overflow: visible;
 	white-space: nowrap;
 	outline: 0 !important;
 }
